@@ -2,7 +2,9 @@
 # 🚀 Getting Started
 #NOTE YOU WILL NEED TO REPLACE THE PROJECT URL AND API KEY TO MATCH YOUR OWN IN THE SUPABASE.SWIFT FILE
 THIS CAN BE FOUND ON THE SUPABASE DASHBOARD BY SCROLLING DOWN
+
 [Supabase](https://supabase.com/)
+You can also add the swift package to your project with the following link: https://github.com/supabase/supabase-swift
 
 ## 1. Clone the Repo
 ```bash
