@@ -11,10 +11,12 @@
 
 import SwiftUI
 
+/// Root view that switches between authenticated and unauthenticated flows.
 struct ContentView: View {
+    /// Hold a single source of truth for auth state across the view hierarchy.
     @StateObject private var authViewModel = AuthViewModel()
     var body: some View {
-    
+        // Decide which screen to show based on authentication status.
         Group{
             if authViewModel.isAuthenticated {
                 HomeView(authViewModel: authViewModel)
@@ -22,6 +24,7 @@ struct ContentView: View {
                 LoginView(authViewModel: authViewModel)
             }
         }
+        // On appearance, attempt to restore the previous session.
         .task{
             await authViewModel.getInitialSession()
         }
@@ -31,3 +34,4 @@ struct ContentView: View {
 //#Preview {
 //    ContentView()
 //}
+
